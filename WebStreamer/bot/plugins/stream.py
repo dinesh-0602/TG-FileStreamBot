@@ -39,9 +39,7 @@ async def media_receive_handler(_, m: Message):
         # dkabl
         rm = None
     await m.reply_text(
-        text="<code>{}</code>\n(<a href='{}'>shortened</a>)".format(
-            stream_link, short_link
-        ),
+        text=f"<code>{stream_link}</code>\n(<a href='{short_link}'>shortened</a>)",
         quote=True,
         parse_mode=ParseMode.HTML,
         reply_markup=rm,
